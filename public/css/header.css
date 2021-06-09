@@ -1,0 +1,31 @@
+header {
+  background-color: #315037;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+.logo a:hover {
+  color: yellow;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.2rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: yellow;
+}

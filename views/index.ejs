@@ -1,0 +1,43 @@
+<%- include('./partials/head') %> 
+<%- include('./partials/header') %> 
+    <div class="container">
+     <div class="welcome">
+      <p>welcome to</p>
+      <h1><i class="fas fa-dice-d20"></i> Dataly</h1>
+      <p>the fastest and smartest way to buy data subscription</p>
+     </div>
+     <div class="buy-container" id="buy">
+       <h2><i class="fas fa-shopping-cart"></i> Buy Data</h2>
+       <form class="buy-form">
+         <label for="network">Network</label>
+         <select name="network" id="network">
+           <option value="mtn">MTN</option>
+           <!-- <option value="glo">Glo</option>
+           <option value="airtel">Airtel</option>
+           <option value="9mobile">9mobile</option> -->
+         </select>
+         <label for="amount">Amount</label>
+         <select name="amount" id="amount">
+           <option value="1.5gb">1.5GB</option>
+           <option value="2gb">2GB</option>
+           <option value="3gb">3GB</option>
+           <option value="4.5gb">4.5GB</option>
+           <option value="6gb">6GB</option>
+           <option value="12gb">12GB</option>
+           <option value="20gb">20GB</option>
+         </select>
+         <label for="pn">Phone Number</label>
+         <input type="tel" name="pn" id="pn" >
+         <input type="text" id="price" value="1000" disabled>
+         <button class="buynow">Buy Now</button>
+       </form>
+     </div>
+     <div class="success-msg">
+       Payment successful. Your data is on its way...
+     </div>
+    </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="/config/config.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
