@@ -53,7 +53,8 @@ buyNow.addEventListener("click", (e) => {
 
   if (
     phoneNumber.value.trim().length == 0 ||
-    phoneNumber.value.trim().length < 11
+    phoneNumber.value.trim().length < 11 ||
+    phoneNumber.value.trim().length > 11
   ) {
     alert("Enter a valid phone number");
   } else {
