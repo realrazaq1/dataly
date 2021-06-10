@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 require("dotenv").config();
+const Purchase = require("../models/Purchase");
 
 module.exports = {
   showHomePage: (req, res) => {
@@ -18,8 +19,29 @@ module.exports = {
     );
     const resp = await response.json();
     const { status, reference, paid_at, authorization, metadata } = resp.data;
-    console.log(status, reference, paid_at, authorization, metadata);
-    // console.log(resp);
-    res.status(200).json({ status });
+    const {
+      signature,
+      account_name,
+      receiver_bank_account_number,
+      receiver_bank,
+      reusable,
+      ...others
+    } = authorization;
+    // console.log(others);
+
+    // send success status to frontend
+    res.status(200).json({ status, reference });
+
+    // save purchase in DB
+    await Purchase.create({
+      network: metadata.network,
+      amount: metadata.amount,
+      price: metadata.price,
+      phoneNumber: metadata.phoneNumber,
+      reference,
+      paidAt: paid_at,
+      paymentInfo: JSON.stringify(others),
+    });
+    console.log("new purchase made...", reference);
   },
 };

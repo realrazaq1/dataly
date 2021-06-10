@@ -5,6 +5,15 @@ const phoneNumber = document.querySelector("#pn");
 const buyNow = document.querySelector(".buynow");
 const buyForm = document.querySelector(".buy-form");
 const successMsg = document.querySelector(".success-msg");
+const msg = document.querySelector(".msg");
+const closeMsg = document.querySelector(".close-msg");
+
+// close msg
+closeMsg.addEventListener("click", (e) => {
+  console.log("closebtn clicked");
+  successMsg.style.display = "none";
+  msg.innerHTML = "";
+});
 
 // buyform
 buyForm.addEventListener("change", (e) => {
@@ -61,9 +70,10 @@ buyNow.addEventListener("click", (e) => {
           const resp = await res.json();
           if (resp.status == "success") {
             successMsg.style.display = "block";
-            setTimeout(() => {
-              successMsg.style.display = "none";
-            }, 5000);
+            msg.innerHTML = `Payment successful. Your data is on its way... Your transaction ref is: <b>${resp.reference}</b>. Keep it for reference purpose.`;
+            // setTimeout(() => {
+            //   successMsg.style.display = "none";
+            // }, 5000);
           }
         })();
       },
