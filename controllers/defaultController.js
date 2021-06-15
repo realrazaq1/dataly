@@ -2,11 +2,12 @@ const fetch = require("node-fetch");
 require("dotenv").config();
 const Purchase = require("../models/Purchase");
 
-module.exports = {
-  showHomePage: (req, res) => {
+class DefaultController {
+  static showHomePage = (req, res) => {
     res.render("index", { cssfile: "index.css" });
-  },
-  verifyTransaction: async (req, res) => {
+  };
+
+  static verifyTransaction = async (req, res) => {
     const { ref } = req.query;
     const response = await fetch(
       "https://api.paystack.co/transaction/verify/" + ref,
@@ -43,5 +44,7 @@ module.exports = {
       paymentInfo: JSON.stringify(others),
     });
     console.log("new purchase made...", reference);
-  },
-};
+  };
+}
+
+module.exports = DefaultController;

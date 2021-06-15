@@ -1,10 +1,10 @@
 const express = require("express");
-const defaultController = require("../controllers/defaultController");
+const DefaultController = require("../controllers/DefaultController");
 
 const router = express.Router();
 
 // homepage
-router.get("/", defaultController.showHomePage);
-router.get("/verify_transaction", defaultController.verifyTransaction);
+router.get("/", DefaultController.showHomePage);
+router.get("/verify_transaction", DefaultController.verifyTransaction);
 
 module.exports = router;

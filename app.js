@@ -1,5 +1,5 @@
 const express = require("express");
-const defaultRoutes = require("./routes/defaultRoutes");
+const DefaultRoutes = require("./routes/DefaultRoutes");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -33,4 +33,4 @@ app.use(express.urlencoded({ extended: true }));
 })();
 
 // routes
-app.use(defaultRoutes);
+app.use(DefaultRoutes);

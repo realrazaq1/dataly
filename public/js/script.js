@@ -48,7 +48,7 @@ buyNow.addEventListener("click", (e) => {
     amount: amount.value.trim(),
     price: price.value.trim(),
     phoneNumber: phoneNumber.value.trim(),
-    email: phoneNumber.value.trim() + "@dataly.io",
+    email: phoneNumber.value.trim() + "@dataly.app",
   };
 
   if (
