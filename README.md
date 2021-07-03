@@ -2,6 +2,12 @@
 
 Dataly is a web application where customers can purchase data subscription. Currently supports only MTN network.
 
+## Technologies used 
+- NodeJS 
+- MongoDB 
+- Express 
+- Mongoose 
+- Paystack API & Library 
 ## Application type 
 Fullstack
 
