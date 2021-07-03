@@ -7,6 +7,7 @@ Dataly is a web application where customers can purchase data subscription. Curr
 - MongoDB 
 - Express 
 - Mongoose 
+- EJS 
 - Paystack API & Library 
 ## Application type 
 Fullstack
