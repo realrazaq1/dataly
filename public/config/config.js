@@ -1,3 +1,3 @@
 const config = {
-  pkey: "pk_test_b399d8d63e47584452e9438c24c6d456e74d6b84",
+  pkey: "pk_live_9676757caa08e5e1396a94143f638bf021397ac6",
 };
