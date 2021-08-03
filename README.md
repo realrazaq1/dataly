@@ -1,6 +1,9 @@
 # What is Dataly
 
-Dataly is a web application where customers can purchase data subscription. Currently supports only MTN network.
+Dataly is a data vending application where customers can buy data subscription for their mobile phones. 
+
+## Live Preview
+https://dataly.herokuapp.com/
 
 ## Technologies used 
 - NodeJS 
